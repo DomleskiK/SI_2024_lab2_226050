@@ -12,15 +12,24 @@ Control Flow Graph
 Тест случаи според критериумот Every statement
 
 allItems = null -> "allItems list can't be null!"
+
 allItems = [("",null,200,0)] -> "No barcode!"
+
 allItems = [("name","kod123",200,0)] -> "Invalid character in item barcode!"
+
 allItems = [("name", "0000",1000,0.1)]; payment = 100 -> false
+
 allItems = [("name", "0000",1000,0)]; payment = 100 -> true
 
 
 Тест случаи според критериумот Every path
 
+
 TTT    allItems = [("name","1234",400,0.1)] -> true
+
 TFX    allItems = [("name","1234",400,0.1)] -> false
+
 TTF    allItems = [("name","1234",400,0)] -> false
+
 FXX    allItems = [("name","1234",100,0)] -> false
+
